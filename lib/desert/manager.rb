@@ -30,6 +30,7 @@ module Desert
         paths << File.join(component_root, 'app','models')
         paths << File.join(component_root, 'app','controllers')
         paths << File.join(component_root, 'app','helpers')
+        paths << File.join(component_root, 'app','sweepers')
         paths << File.join(component_root, 'lib')
       end
       dependencies.load_paths.reverse.each do |path|
@@ -47,6 +48,7 @@ module Desert
       dependencies.load_paths << plugin.models_path
       dependencies.load_paths << plugin.controllers_path
       dependencies.load_paths << plugin.helpers_path
+      dependencies.load_paths << plugin.sweepers_path
 
       @plugins_in_registration.pop
 

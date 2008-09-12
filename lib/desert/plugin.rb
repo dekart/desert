@@ -29,6 +29,11 @@ module Desert
       "#{@path}/app/helpers"
     end
 
+    # TODO: Test me
+    def sweepers_path
+      "#{@path}/app/sweepers"
+    end
+
     # The path to the layout for this plugin
     def layouts_path
       "#{templates_path}/layouts"
