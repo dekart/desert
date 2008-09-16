@@ -13,8 +13,6 @@ end
 
 class Rails::Initializer
   def load_observers_with_desert
-    # todo verify if this should be logged
-    puts  "Adding #{Desert::Rails::Observer.observers.inspect} to #{ActiveRecord::Base.observers.inspect}"
     ActiveRecord::Base.observers += Desert::Rails::Observer.observers.uniq
     load_observers_without_desert
   end
